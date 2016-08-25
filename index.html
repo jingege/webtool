@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BootStrap3 倒计时效果</title>
+		<meta name="description" content="BootStrap3 倒计时效果" />
+		<meta name="keywords" content="倒计时, bootstrap3, Javascript, countdown" />
+		<meta name="author" content="gbtags.com" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="gbtags-header">
+				<div class="page-header">
+				<h1 class="text-primary"><span class="glyphicon glyphicon-th"></span> BootStrap3 倒计时效果 <span class="small">jQuery countdown插件实现</span></h1>
+				</div>
+			</header>
+			<section class="row">
+				<div class="col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading"><h3>Bootstrap课程倒计时</h3></div>
+						<div class="panel-body text-center fixedheight">
+							<h2 class="text-danger"><span class="glyphicon glyphicon-time"></span> <span id="clock2"></span></h2>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading"><h3>jQuery课程倒计时</h3></div>
+						<div class="panel-body text-center fixedheight">
+							<h2 class="text-danger"><span class="glyphicon glyphicon-time"></span> <span id="clock1"></span></h2>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="row pull-right">
+				<div class="col-md-12">
+					via <a href="http://www.gbtags.com">gbtags.com</a>
+				</div>
+			</footer>
+		</div><!-- /container -->
+		<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="js/jquery.countdown.js"></script>
+		<script>
+		var first = new Date(), second = new Date();
+		first.setDate(first.getDate()+5);
+		second.setSeconds(second.getSeconds()+3);
+
+		$('#clock1').countdown(first, function(event) {
+			$(this).html(event.strftime('倒计时 %D 天 %H:%M:%S'));
+		})
+
+		$('#clock2').countdown(second, function(event) {
+			$(this).html(event.strftime('倒计时 %D 天 %H:%M:%S'));
+		}).on('finish.countdown', function(){
+			$(this).parent().hide().html('<button class="btn btn-success btn-lg"><span class="glyphicon glyphicon-headphones"></span> 进入Live课程</button>').show().addClass('animated bounceIn').closest('.panel').removeClass('panel-primary').addClass('panel-success');
+		});
+		</script>
+	</body>
+</html>
