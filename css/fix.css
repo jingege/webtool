@@ -1,0 +1,175 @@
+/**
+ * 导航样式
+ */
+body{
+    font-family: Microsoft yahei,SimHei;
+}
+#header{
+    background:#fff;
+    border-radius:0;
+    border:0;
+    margin:0;
+    padding:0;
+}
+body div{
+    border-radius:0;
+}
+
+
+/**
+ * 副导航样式
+ */
+.nav-title{
+    font-size:1.3em;
+    font-family: SimHei;
+}
+.sub-header{
+    background:#4DBDEB;
+    height:60px;
+    box-shadow: 0 2px 2px #333;
+    /*position:fixed;*/
+    /*left:0;right:0;top:50px;*/
+    /*z-index:99;*/
+}
+.tool-brand{
+    height:60px;
+    line-height:60px;
+}
+@media screen (max-device-width:768px) {
+
+    .tool-brand{
+        height:20px;
+        line-height:20px;
+        text-align:center;
+    }
+}
+.tool-item{
+    height:60px;
+    line-height:60px;
+    text-wrap:nowrap;
+    border-bottom:2px solid transparent;
+}
+.tool-item:hover{
+    background: #3cacda;
+    border-bottom:2px solid #222;
+}
+.sub-header h5{
+    width:100px;
+    font-size:16px;
+    height:60px;
+    line-height:60px;
+    margin:0;padding:0;
+    font-family:"SimHei";
+}
+.sub-header a {
+    display: block;
+    height:60px;
+    line-height:60px;
+    font-size:14px;
+    width:70px;
+    color:#333;
+    text-align:center;
+    text-decoration:none;
+    font-family:"SimHei";
+    cursor:pointer;
+    position:relative;
+}
+/*.sub-header a:after{*/
+    /*content:'';*/
+    /*display:block;*/
+    /*width:10px;height:10px;*/
+    /*transform: rotate(45deg);*/
+    /*position:absolute;*/
+    /*bottom:-5px;left:30px;*/
+    /*/!*border:2px solid #fff;*!/*/
+    /*/!*border-right:none;*!/*/
+    /*/!*border-bottom:none;*!/*/
+    /*background:#333;*/
+    /*z-index:-88;*/
+/*}*/
+.sub-header a:hover,
+.sub-header a.active{
+    background:#0099cc;
+    border-bottom:2px solid #333;
+    color:#fff;
+}
+
+
+/**
+ * 主体部分样式
+ */
+.main{
+    margin-top:10px;
+    position:relative;
+}
+
+// .main .item{
+//     width:100%;
+//     height:500px;
+//     border:2px solid #aaa;
+// }
+
+// li.time-ex:before{
+//     content:'';
+//     display:block;
+//     width:10px;height:10px;
+//     transform: rotate(45deg);
+//     position:absolute;
+//     top:-5px;left:330px;
+//     border:2px solid #aaa;
+//     border-right:none;
+//     border-bottom:none;
+//     background:#fff;
+//     z-index:88;
+// }
+.item-header{
+
+}
+.well.time-info li{
+    margin-right:20%;
+    margin-left:20px;
+    text-align:right;
+}
+.trans-btn{
+    width:100px;
+    background:#4DBDEB;
+    border:none;
+    color:#333;
+}
+.now-info.cell{
+    background: #ddd;
+    
+}
+.now-info span{
+    font-size:16px;
+}
+
+/**
+ * 覆盖样式
+ */
+#main .cell{
+    background: #fff;
+    padding:30px 0;
+    /*border:1px solid #ddd;*/
+    /*border-bottom:1px solid #666;*/
+}
+.well{
+    border-radius:0;
+    // background:#fff;
+    border:none;
+    // box-shadow:0 0 1px #000;
+}
+.current-time .active,
+.ex-time .active{
+    background:#333;
+    color:#fff;
+    border:none;
+}
+.btn-group-addon:hover{
+    background: #666;
+}
+
+.item{
+    border:1px solid #ddd;
+    padding:20px 20px;
+}
